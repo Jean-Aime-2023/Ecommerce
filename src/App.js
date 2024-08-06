@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Hero from './components/shared/Hero';
+import Navbar from './components/shared/Navbar';
+import img from './assets/images/Vector.png'
+import Support from './components/shared/Support';
+import FlashSales from './components/shared/FlashSales';
+import Benefits from './components/shared/Benefits';
+import Sellers from './components/shared/Sellers';
+import Category from './components/shared/Category';
+import Tesimonials from './components/shared/Tesimonials';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col gap-16">
+        <div className='relative flex flex-col gap-16'>
+        <Navbar />
+        <Hero />
+        <div className='absolute right-0 top-0 -z-10 max-md:hidden'>
+          <img src={img} alt='img'/>
+        </div>
+        </div>
+        <Support/>
+        <div><hr className='max-w-[1470px] mx-auto' /></div>
+        <FlashSales/>
+        <div><hr className='max-w-[1470px] mx-auto' /></div>
+        <Benefits/>
+        <div><hr className='max-w-[1470px] mx-auto' /></div>
+        <Sellers/>
+        <div><hr className='max-w-[1470px] mx-auto' /></div>
+        <Category/>
+        <div><hr className='max-w-[1470px] mx-auto' /></div>
+        <Tesimonials/>
     </div>
   );
 }
-
-export default App;
