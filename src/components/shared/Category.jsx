@@ -3,6 +3,8 @@ import svg from '../../assets/icons/Rectangle 18.svg'
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import svg1 from '../../assets/icons/Chair.svg'
+import svg2 from '../../assets/icons/Toilet.svg'
+
 const Category = () => {
     return (
         <div className='container poppins flex flex-col gap-4'>

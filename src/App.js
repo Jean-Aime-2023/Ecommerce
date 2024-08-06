@@ -7,6 +7,8 @@ import Benefits from './components/shared/Benefits';
 import Sellers from './components/shared/Sellers';
 import Category from './components/shared/Category';
 import Tesimonials from './components/shared/Tesimonials';
+import Subscribe from './components/shared/Subscribe';
+import Footer from './components/shared/Footer';
 
 export default function App() {
   return (
@@ -19,16 +21,19 @@ export default function App() {
         </div>
         </div>
         <Support/>
-        <div><hr className='max-w-[1470px] mx-auto' /></div>
+        <div><hr className='container' /></div>
         <FlashSales/>
-        <div><hr className='max-w-[1470px] mx-auto' /></div>
+        <div><hr className='container' /></div>
         <Benefits/>
-        <div><hr className='max-w-[1470px] mx-auto' /></div>
+        <div><hr className='container' /></div>
         <Sellers/>
-        <div><hr className='max-w-[1470px] mx-auto' /></div>
+        <div><hr className='container' /></div>
         <Category/>
-        <div><hr className='max-w-[1470px] mx-auto' /></div>
+        <div><hr className='container' /></div>
         <Tesimonials/>
+        <div><hr className='container' /></div>
+        <Subscribe/>
+        <Footer/>
     </div>
   );
 }

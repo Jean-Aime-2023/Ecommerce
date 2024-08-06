@@ -59,7 +59,7 @@ module.exports = {
       },
       
       backgroundImage:{
-        hero:"url('/src/assets/images/Vector.png')",
+        subscribe:"url('/src/assets/images/taps.jpeg')",
       },
       keyframes: {
         "accordion-down": {
