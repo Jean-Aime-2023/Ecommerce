@@ -1,39 +1,37 @@
-import Hero from './components/shared/Hero';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Landing from './pages/Landing';
+import Contact from './pages/Contact';
+import About from './pages/About';
+import Signup from './pages/Signup';
+import Signin from './pages/Signin';
 import Navbar from './components/shared/Navbar';
-import img from './assets/images/Vector.png'
-import Support from './components/shared/Support';
-import FlashSales from './components/shared/FlashSales';
-import Benefits from './components/shared/Benefits';
-import Sellers from './components/shared/Sellers';
-import Category from './components/shared/Category';
-import Tesimonials from './components/shared/Tesimonials';
-import Subscribe from './components/shared/Subscribe';
 import Footer from './components/shared/Footer';
 
 export default function App() {
   return (
-    <div className="flex flex-col gap-16">
-        <div className='relative flex flex-col gap-16'>
-        <Navbar />
-        <Hero />
-        <div className='absolute right-0 top-0 -z-10 max-md:hidden'>
-          <img src={img} alt='img'/>
-        </div>
-        </div>
-        <Support/>
-        <div><hr className='container' /></div>
-        <FlashSales/>
-        <div><hr className='container' /></div>
-        <Benefits/>
-        <div><hr className='container' /></div>
-        <Sellers/>
-        <div><hr className='container' /></div>
-        <Category/>
-        <div><hr className='container' /></div>
-        <Tesimonials/>
-        <div><hr className='container' /></div>
-        <Subscribe/>
-        <Footer/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route
+          path="/*"
+          element={
+            <div className="min-h-screen flex flex-col relative">
+              <Navbar />
+              <main className="flex-grow">
+                <Routes>
+                  <Route path="/home" element={<Landing />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/signup" element={<Signup />} />
+                  <Route path="/login" element={<Signin />} />
+                  <Route path="/home/product" element={<Signin />} />
+                </Routes>
+              </main>
+              <Footer />
+            </div>
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
