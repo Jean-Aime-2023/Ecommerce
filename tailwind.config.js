@@ -60,7 +60,8 @@ module.exports = {
 
       backgroundImage: {
         subscribe: "url('/src/assets/images/taps.jpeg')",
-        subscribe_1: "url('/src/assets/images/Rectangle 854.png')"
+        subscribe_1: "url('/src/assets/images/Rectangle 854.png')",
+        login_bg:"url('/src/assets/images/authImg (1).png')"
       },
       keyframes: {
         'accordion-down': {

@@ -14,12 +14,12 @@ const Hero = () => {
           <p className='text-lg md:text-[20px]'>Our platform ensures a safe and secure shopping experience with 100% buyer protection.</p>
           <p className='text-lg md:text-[20px] md:line-clamp-4'>Lorem ipsum dolor sit amet consectetur. Metus ultrices praesent diam amet. Felis est faucibus vulputate at augue.Lorem ipsum dolor sit amet consectetur.</p>
         </div>
-        <div className='max-md:hidden'><Button className="bg-[#DB4444] px-10 py-6 text-lg poppins font-bold leading-[24px]">Start Now</Button></div>
+        <div className='max-md:hidden'><Button className="bg-[#DB4444] px-10 py-6 text-lg poppins font-bold leading-[24px] hover:bg-red-500">Start Now</Button></div>
       </div>
       <div className='lg:w-[60%] md:w-[40%]'>
         <img src={HeroImg} alt="" className='object-cover'/>
       </div>
-      <div className='md:hidden'><Button className="bg-[#DB4444] px-10 py-6 text-lg poppins font-bold leading-[24px] rounded">Start Now</Button></div>
+      <div className='md:hidden'><Button className="bg-[#DB4444] px-10 py-6 text-lg poppins font-bold leading-[24px] rounded hover:bg-red-500">Start Now</Button></div>
     </div>
   )
 }

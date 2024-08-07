@@ -13,9 +13,11 @@ export default function App() {
   return (
     <Router>
       <Routes>
+        {/* 1st layout */}
         <Route path="/" element={<Landing />} />
+
+        {/* 2nd layout */}
         <Route
-          path="/*"
           element={
             <div className="min-h-screen flex flex-col relative">
               <Navbar />
@@ -24,29 +26,36 @@ export default function App() {
                   <Route path="contact" element={<Contact />} />
                   <Route path="about" element={<About />} />
                   <Route path="products" element={<Products />} />
-                  <Route path="signup" element={<Signup />} />
-                  <Route path="login" element={<Signin />} />
                   <Route path="home/product" element={<Product />} />
                 </Routes>
               </main>
               <Footer />
             </div>
           }
-        />
+        >
+          <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
+          <Route path="products" element={<Products />} />
+          <Route path="home/product" element={<Product />} />
+        </Route>
+
+        {/* 3rd layout */}
         <Route
-         path="/*"
-         element={
-          <div className="min-h-screen flex flex-col relative">
+          element={
+            <div className="min-h-screen flex flex-col relative">
               <Navbar />
               <main className="flex-grow">
                 <Routes>
                   <Route path="signup" element={<Signup />} />
-                  <Route path="login" element={<Signin />} />
+                  <Route path="signin" element={<Signin />} />
                 </Routes>
               </main>
             </div>
-         }
-        />
+          }
+        >
+          <Route path="signup" element={<Signup />} />
+          <Route path="signin" element={<Signin />} />
+        </Route>
       </Routes>
     </Router>
   );

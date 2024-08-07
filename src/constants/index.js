@@ -13,7 +13,7 @@ export const sidebarLinks = [
       label: 'About',
     },
     {
-      route: '/login',
+      route: '/signin',
       label: 'Login',
     },
     {
