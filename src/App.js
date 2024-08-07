@@ -6,6 +6,8 @@ import Signup from './pages/Signup';
 import Signin from './pages/Signin';
 import Navbar from './components/shared/Navbar';
 import Footer from './components/shared/Footer';
+import Products from './pages/Products';
+import Product from './pages/Product';
 
 export default function App() {
   return (
@@ -19,17 +21,31 @@ export default function App() {
               <Navbar />
               <main className="flex-grow">
                 <Routes>
-                  <Route path="/home" element={<Landing />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/signup" element={<Signup />} />
-                  <Route path="/login" element={<Signin />} />
-                  <Route path="/home/product" element={<Signin />} />
+                  <Route path="contact" element={<Contact />} />
+                  <Route path="about" element={<About />} />
+                  <Route path="products" element={<Products />} />
+                  <Route path="signup" element={<Signup />} />
+                  <Route path="login" element={<Signin />} />
+                  <Route path="home/product" element={<Product />} />
                 </Routes>
               </main>
               <Footer />
             </div>
           }
+        />
+        <Route
+         path="/*"
+         element={
+          <div className="min-h-screen flex flex-col relative">
+              <Navbar />
+              <main className="flex-grow">
+                <Routes>
+                  <Route path="signup" element={<Signup />} />
+                  <Route path="login" element={<Signin />} />
+                </Routes>
+              </main>
+            </div>
+         }
         />
       </Routes>
     </Router>

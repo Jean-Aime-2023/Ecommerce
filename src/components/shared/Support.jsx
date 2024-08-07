@@ -9,7 +9,7 @@ const Support = () => {
   return (
     <div className='text-center mt-10'>
         <p className='montserrat text-[#CAC9C9]'>Support by:</p>
-        <div className='flex flex-row justify-between items-center container'>
+        <div className='hide-scrollbar flex flex-row justify-between items-center container overflow-x-scroll gap-10'>
             <img src={img} alt="" />
             <img src={img3} alt="" />
             <img src={img2} alt="" />
